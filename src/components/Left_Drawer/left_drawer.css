@@ -1,0 +1,35 @@
+.left_drawer_container{
+    background-color: #191D2B;
+    width: 20%;
+    height: 100vh;
+}
+
+/* Avatar image */
+.avatar_image_div{
+    
+}
+.avatar_image_div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
+}
+
+/* Drawer ul navigation tools */
+.left_drawer_ul{
+
+}
+
+.left_drawer_ul li{
+    list-style: none;
+}
+
+.left_drawer_ul li a{
+    text-decoration: none;
+    color: #9FA7BE;
+}
+
+.left_drawer_ul a:hover{
+    color: salmon;
+}
+.left_drawer_ul a:active{}

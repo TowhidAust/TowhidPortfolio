@@ -1,0 +1,27 @@
+
+.MainAppContainer{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.particle_banner{
+  position: relative;
+  width: 80%;
+}
+
+.particle_contents{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:100%;
+}
+.name{
+  color: white;
+  font-size:4em;
+  text-align: center;
+}
+.left_drawer_div{
+  width: 20%;
+  height: 20vh;
+  background: salmon;
+}
