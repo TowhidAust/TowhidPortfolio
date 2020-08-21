@@ -5,13 +5,18 @@ import {
   BrowserRouter as Router,
 } from "react-router-dom";
 import LeftDrawer from './components/Left_Drawer/left_drawer';
+import { Button } from 'react-bootstrap';
 
 
 function App() {
   return (
     <Router>
       <div className="MainAppContainer">
+      
             <div className="particle_banner">
+            <div className="collapse_icon" onClick={()=>{
+              
+            }}>Collapse</div>
                 <Particles
                   style={{backgroundColor: '#10121B'}}
                   width="100%"

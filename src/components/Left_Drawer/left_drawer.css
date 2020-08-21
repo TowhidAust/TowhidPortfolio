@@ -2,6 +2,9 @@
     background-color: #191D2B;
     width: 20%;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 /* Avatar image */

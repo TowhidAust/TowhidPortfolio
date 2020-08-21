@@ -1,11 +1,13 @@
 
 .MainAppContainer{
-  display: flex;
-  flex-direction: row-reverse;
+  width: 100%;
+  overflow: hidden;
 }
 .particle_banner{
   position: relative;
   width: 80%;
+  margin-left: 20%;
+  height: 100vh;
 }
 
 .particle_contents{
@@ -14,6 +16,8 @@
   left:50%;
   transform:translate(-50%,-50%);
   width:100%;
+  max-height: 100%;
+  overflow: auto;
 }
 .name{
   color: white;
@@ -24,4 +28,9 @@
   width: 20%;
   height: 20vh;
   background: salmon;
+}
+.collapse_icon{
+  position: absolute;
+  top: 0;
+  background:saddlebrown;
 }
