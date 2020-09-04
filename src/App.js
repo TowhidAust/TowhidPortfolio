@@ -13,13 +13,18 @@ function App() {
     <Router>
       <div className="MainAppContainer">
       
-            <div className="particle_banner">
+        <div className="particle_banner">
+         
+          
+
+          <LeftDrawer/>
+          <div className="particle_div">
             <div className="collapse_icon" onClick={()=>{
-              
+              alert('This is click alert');
             }}>Collapse</div>
-                <Particles
+              <Particles
                   style={{backgroundColor: '#10121B'}}
-                  width="100%"
+                  width="80vw"
                   height="100vh"
                   params={{
 
@@ -49,12 +54,14 @@ function App() {
                   <p style={{color: "#9FA7BE", fontSize:"1.8em", width: "50%", margin:"auto", textAlign:"center"}}>Full Stack Software Engineer, Corona Engineering Ltd.</p>
                   <p style={{color: "#9FA7BE", fontSize:"1.3em", width: "50%", margin:"auto", textAlign:"center"}}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites with firebase, nodejs, expressJs and all other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal sslCommerz etc.</p>
                 </header>
-            </div>
+          </div>
+              
+          
+        </div>
             
            
-              <LeftDrawer/>
             
-          </div>
+      </div>
         
     </Router>
    
