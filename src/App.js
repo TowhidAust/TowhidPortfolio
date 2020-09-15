@@ -3,8 +3,13 @@ import './App.css';
 import Particles from 'react-particles-js';
 import {
   BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
 } from "react-router-dom";
 import LeftDrawer from './components/Left_Drawer/left_drawer';
+import About from "./components/About";
+import Home from "./components/Home";
 import { Button } from 'react-bootstrap';
 
 
@@ -13,10 +18,7 @@ function App() {
     <Router>
       <div className="MainAppContainer">
       
-        <div className="particle_banner">
-         
-          
-
+        {/* <div className="particle_banner">
           <LeftDrawer/>
           <div className="particle_div">
             <div className="collapse_icon" onClick={()=>{
@@ -24,7 +26,7 @@ function App() {
             }}>Collapse</div>
               <Particles
                   style={{backgroundColor: '#10121B'}}
-                  width="80vw"
+                  width="100%"
                   height="100vh"
                   params={{
 
@@ -39,7 +41,7 @@ function App() {
                         }
                       },
                       number: {
-                        value: 50
+                        value: 120
                       },
                       size: {
                         value: 3
@@ -57,10 +59,15 @@ function App() {
           </div>
               
           
-        </div>
+        </div> */}
+
+        
             
-           
-            
+                  <Switch>
+                    <Route path="/" exact component={Home}></Route>
+
+                    <Route path="/About" exact component={About}></Route>
+                  </Switch>
       </div>
         
     </Router>

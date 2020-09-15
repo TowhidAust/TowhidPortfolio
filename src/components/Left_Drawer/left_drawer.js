@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./left_drawer.css";
+import About from "../About";
 
 
 export default function LeftDrawer() {
@@ -8,14 +10,18 @@ export default function LeftDrawer() {
   return (
     
     <div  className="left_drawer_container">
-        <div className="avatar_image_div"><img src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" /></div>
+        <div className="avatar_image_div">
+          <a className="myImageAnchor" href="#">
+            <img className="myImage" src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" />
+          </a>
+          </div>
         <hr/>
         <ul className="left_drawer_ul">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Portfolio</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Blog</a></li>
-            <li><a href="/">Techs</a></li>
+            <li><Link className="active" href="#">Home</Link></li>
+            <li><Link to="#">Portfolio</Link></li>
+            <li><Link to={"/About"}>About</Link></li>
+            <li><Link to="#">Blog</Link></li>
+            <li><Link to="#">Techs</Link></li>
         </ul>
     </div>
   
