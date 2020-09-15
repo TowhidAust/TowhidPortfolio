@@ -10,26 +10,17 @@ export default class Home extends Component {
     }
 
     MyCoolCodeBlock() {
-        let code = `import React, { Component } from 'react'
-
-        export default class Myself extends Component {
-            render() {
-                return (
-                    <div>
-                        <h3>Hi, I am Md. Towhidul Islam</h3>
-                        <h3> Full Stack Software Engineer, 
-                        Corona Engineering Ltd. <h3/>
-                        <p>I am a fullstack developer.I can provide
-                        clean code and pixel perfect design. I can 
-                        make dynamic websites with firebase, nodejs,
-                        expressJs and all other modern javascript
-                        technologies like reactJs, reactNative etc.
-                        I can also integrate payment gateways like
-                        Paypal sslCommerz etc.</p>
-                    </div>
-                )
-            }
-        }
+        let code =`import React, { Component } from 'react'
+ export default class Myself extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Hi, I am Md. Towhidul Islam</h3>
+                <h3> Full Stack Software Engineer, Corona Engineering Ltd. <h3/>
+            </div>
+        )
+    }
+ }
         `
         let language = "jsx"
         let showLineNumbers = true;
