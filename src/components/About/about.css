@@ -1,0 +1,28 @@
+.AboutContainer{
+    display: flex;
+}
+.aboutContents{
+    background-color: #10121B;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100vh;
+}
+.aboutMeImage{
+    width: 200px;
+    height: 200px;
+}
+.aboutMeImage .ownImage{
+    width: 100%;
+}
+
+.aboutContentsInner{
+
+}
+
+.aboutHeading{
+    color: white;
+    text-align: center;
+}

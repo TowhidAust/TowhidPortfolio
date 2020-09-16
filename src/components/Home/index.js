@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import LeftDrawer from "../Left_Drawer/left_drawer";
+import LeftDrawer from "../Left_Drawer";
 import Particles from 'react-particles-js';
 import { CopyBlock, dracula } from "react-code-blocks";
 
@@ -76,8 +76,6 @@ export default class Home extends Component {
                             <h1 className="name"> Hi, i am  <b style={{color:"#037BF9"}}> Md. Towhidul Islam</b> </h1>
                             
                             <div style={{width:"50%", margin: "auto"}}>
-
-                            {this.MyCoolCodeBlock()}
                             </div>
                             <p style={{color: "#9FA7BE", fontSize:"1.8em", width: "50%", margin:"auto", textAlign:"center"}}>Full Stack Software Engineer, Corona Engineering Ltd.</p>
                             <p style={{color: "#9FA7BE", fontSize:"1.3em", width: "50%", margin:"auto", textAlign:"center"}}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites with firebase, nodejs, expressJs and all other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal sslCommerz etc.</p>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { CodeBlock, dracula } from "react-code-blocks";
+import LeftDrawer from '../Left_Drawer';
+import "./about.css";
 
 export default class About extends Component {
 
@@ -19,12 +21,23 @@ export default class About extends Component {
             theme={dracula}
           />
         );
-      }
+    }
     render() {
         return (
-            <div>
-                <h3>This is about page</h3>
-                {this.MyCoolCodeBlock()}
+          <div>
+            <div className="AboutContainer">
+              <LeftDrawer />
+              <div className="aboutContents">
+                <div className="aboutContentsInner">
+                  <h1 className="aboutHeading">About Me</h1>
+                  <hr/>
+                  <div className="aboutMeImage">
+                    <img className="ownImage" src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" />
+                  </div>
+                  {this.MyCoolCodeBlock()}
+                </div>
+              </div>
+            </div>
             </div>
         )
     }
