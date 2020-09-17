@@ -4,6 +4,12 @@ import Particles from 'react-particles-js';
 import { CopyBlock, dracula } from "react-code-blocks";
 
 export default class Home extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {date: new Date()}
+    }
+    
     componentDidMount(){
 
         // this.MyCoolCodeBlock();

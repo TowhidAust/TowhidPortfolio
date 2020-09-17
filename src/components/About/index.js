@@ -4,7 +4,16 @@ import LeftDrawer from '../Left_Drawer';
 import "./about.css";
 
 export default class About extends Component {
-
+    constructor(props){
+      super(props);
+      this.state = {
+        isDataLoaded : false
+      }
+    }
+    componentDidMount(){
+      // console.log("state is == ", this.state);
+    }
+    
     MyCoolCodeBlock() {
         let code = `console.log('Hi this is towhid');
         for(let i =0; i<=10; i++){

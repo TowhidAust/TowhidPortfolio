@@ -17,7 +17,7 @@ export default function LeftDrawer() {
           </div>
         <hr/>
         <ul className="left_drawer_ul">
-            <li><Link className="active" to={"/Home"}>Home</Link></li>
+            <li><Link className="active" to={"/"}>Home</Link></li>
             <li><Link to="/">Portfolio</Link></li>
             <li><Link to={"/About"}>About</Link></li>
             <li><Link to="#">Blog</Link></li>
