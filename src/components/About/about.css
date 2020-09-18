@@ -9,20 +9,37 @@
     width: 80%;
     margin-left: 20%;
     min-height: 100vh;
+    /* background-image: url(https://images.unsplash.com/photo-1556388275-bb5585725aca?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 .aboutMeImage{
-    width: 200px;
-    height: 200px;
+   min-width: 35%;
 }
 .aboutMeImage .ownImage{
     width: 100%;
+   max-height: 500px;
+
 }
+.aboutHeadingContainer{
+    width: 30%;
 
+}
 .aboutContentsInner{
-
+    padding: 5%;
+    /* background: rgba(0,0,0,0.7);
+    min-height: 100vh; */
 }
 
 .aboutHeading{
     color: white;
-    text-align: center;
+}
+.aboutMeAndDetailsCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutMe{
+    min-width: 55%;
+    padding: 0 1%;
 }

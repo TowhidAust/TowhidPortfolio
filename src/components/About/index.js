@@ -14,12 +14,20 @@ export default class About extends Component {
     }
     
     MyCoolCodeBlock() {
-        let code = `console.log('Hi this is towhid');
-        for(let i =0; i<=10; i++){
-            console.log("this is for loop");
-        }
+let code =
+`import React, { Component } from 'react'
+export default class Myself extends Component {
+    render() {
+        return (
+          <div>
+            <p>I am a full stack web & 
+            hybrid mobile app developer.</p>
+          </div>
+        )
+      }
+    }
         `
-        let language = "javascript"
+        let language = "jsx"
         let showLineNumbers = true;
         return (
           <CodeBlock
@@ -36,12 +44,22 @@ export default class About extends Component {
             <div className="AboutContainer">
               <div className="aboutContents">
                 <div className="aboutContentsInner">
-                  <h1 className="aboutHeading">About Me</h1>
-                  <hr/>
-                  <div className="aboutMeImage">
-                    <img className="ownImage" src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" />
+
+                  <div className="aboutHeadingContainer">
+                    <h1 className="aboutHeading">About Me</h1>
+                    <hr/>
                   </div>
-                  {this.MyCoolCodeBlock()}
+                
+                  <div className="aboutMeAndDetailsCont">
+                    <div className="aboutMeImage">
+                      <img alt="myImage" className="ownImage" src="http://chester.nuclearthemes.com/images/about-image.jpg" />
+                    </div>
+
+                    <div className="aboutMe">
+                      {this.MyCoolCodeBlock()}
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
             </div>

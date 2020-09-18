@@ -66,10 +66,10 @@ export default class Home extends Component {
                                     }
                                 },
                                 number: {
-                                    value: 120
+                                    value: 200
                                 },
                                 size: {
-                                    value: 3
+                                    value: 2
                                 }
                                 }
                                 

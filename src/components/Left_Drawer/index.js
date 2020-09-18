@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import "./left_drawer.css";
-import About from "../About";
 
 
 export default function LeftDrawer() {
@@ -43,7 +42,7 @@ export default function LeftDrawer() {
   }
 
   function activeStateHomeAccordingToRoute(){
-    if(isActive.isActiveRoute == "/"){
+    if(isActive.isActiveRoute === "/"){
       return "active"
     }else{
 
@@ -51,7 +50,7 @@ export default function LeftDrawer() {
   }
 
   function activeStateAboutAccordingToRoute(){
-    if(isActive.isActiveRoute == "/About"){
+    if(isActive.isActiveRoute === "/About"){
       return "active"
     }else{
       
@@ -62,17 +61,17 @@ export default function LeftDrawer() {
     
     <div  className="left_drawer_container">
         <div className="avatar_image_div">
-          <a className="myImageAnchor" href="#">
-            <img className="myImage" src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" />
-          </a>
+          <div className="myImageAnchor">
+            <img alt="MyImage" className="myImage" src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" />
+          </div>
           </div>
         <hr/>
         <ul className="left_drawer_ul">
             <li><Link  className={`${activeStateHomeAccordingToRoute()} ${activeStateHomeHandler()}`} onClick={()=>{clickHandlerHome()}} to={"/"} >Home</Link></li>
             <li><Link className={`${activeStateAboutAccordingToRoute()} ${activeStateAboutHandler()}`} onClick={()=>{clickHandlerAbout()}} to={"/About"}>About</Link></li>
             <li><Link to="/">Portfolio</Link></li>
-            <li><Link to="#">Blog</Link></li>
-            <li><Link to="#">Techs</Link></li>
+            <li><Link to="/">Blog</Link></li>
+            <li><Link to="/">Techs</Link></li>
         </ul>
     </div>
   
