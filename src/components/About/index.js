@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { CodeBlock, dracula } from "react-code-blocks";
-import LeftDrawer from '../Left_Drawer';
 import "./about.css";
 
 export default class About extends Component {
@@ -11,7 +10,7 @@ export default class About extends Component {
       }
     }
     componentDidMount(){
-      // console.log("state is == ", this.state);
+     
     }
     
     MyCoolCodeBlock() {
@@ -35,7 +34,6 @@ export default class About extends Component {
         return (
           <div>
             <div className="AboutContainer">
-              <LeftDrawer />
               <div className="aboutContents">
                 <div className="aboutContentsInner">
                   <h1 className="aboutHeading">About Me</h1>

@@ -55,7 +55,11 @@
 }
 
 .left_drawer_ul li a.active{
-    background: #037fff;
+    background-color: #037fff;
+    color: #fff;
+}
+.left_drawer_ul li a.inactive{
+    background: unset;
     color: #fff;
 }
 

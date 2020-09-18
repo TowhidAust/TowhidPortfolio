@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import LeftDrawer from "../Left_Drawer";
 import Particles from 'react-particles-js';
 import { CopyBlock, dracula } from "react-code-blocks";
 
@@ -46,7 +45,6 @@ export default class Home extends Component {
         return (
             <div>
                <div className="particle_banner">
-                    <LeftDrawer/>
                     <div className="particle_div">
                         <div className="collapse_icon" onClick={()=>{
                         alert('This is click alert');

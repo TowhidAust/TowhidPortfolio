@@ -1,11 +1,62 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import "./left_drawer.css";
 import About from "../About";
 
 
 export default function LeftDrawer() {
- 
+  
+  const [isActive, setstate] = useState({
+    isActiveRoute: "/",
+    Home: true,
+    About: false
+  })
+
+  useEffect(() => {
+    console.log("useEffect triggers");
+    let route = window.location.pathname;
+    setstate({...isActive, Home: false, About: false, isActiveRoute: route});
+    console.log(route);
+    
+  }, [])
+
+  function clickHandlerHome(){
+    setstate({...isActive, Home: true, About: false, isActiveRoute: false});
+  }
+
+
+
+  function clickHandlerAbout(){
+    setstate({...isActive, Home: false, About: true, isActiveRoute: false});
+  }
+
+  function activeStateHomeHandler(){
+    if(isActive.Home){
+      return "active"
+    }
+  }
+
+  function activeStateAboutHandler(){
+    if(isActive.About){
+      return "active"
+    }
+  }
+
+  function activeStateHomeAccordingToRoute(){
+    if(isActive.isActiveRoute == "/"){
+      return "active"
+    }else{
+
+    }
+  }
+
+  function activeStateAboutAccordingToRoute(){
+    if(isActive.isActiveRoute == "/About"){
+      return "active"
+    }else{
+      
+    }
+  }
 
   return (
     
@@ -17,9 +68,9 @@ export default function LeftDrawer() {
           </div>
         <hr/>
         <ul className="left_drawer_ul">
-            <li><Link className="active" to={"/"}>Home</Link></li>
+            <li><Link  className={`${activeStateHomeAccordingToRoute()} ${activeStateHomeHandler()}`} onClick={()=>{clickHandlerHome()}} to={"/"} >Home</Link></li>
+            <li><Link className={`${activeStateAboutAccordingToRoute()} ${activeStateAboutHandler()}`} onClick={()=>{clickHandlerAbout()}} to={"/About"}>About</Link></li>
             <li><Link to="/">Portfolio</Link></li>
-            <li><Link to={"/About"}>About</Link></li>
             <li><Link to="#">Blog</Link></li>
             <li><Link to="#">Techs</Link></li>
         </ul>
