@@ -54,22 +54,41 @@ export default class Home extends Component {
                             width="100%"
                             height="100vh"
                             params={{
-
-                                particles: {
-                                
+                            particles: {
                                 color: {
                                     value: "#9FA7BE"
                                 },
                                 line_linked: {
+                                    
                                     color: {
-                                    value: "#10121B"
+                                        value: "#10121B"
                                     }
                                 },
                                 number: {
-                                    value: 200
+                                    value: 100,
+                                    density: { 
+                                        enable: false, 
+                                        value_area: 500, 
+                                      }
                                 },
                                 size: {
-                                    value: 2
+                                    value: 3
+                                },
+                                
+                                move: {
+                                    enable: true,
+                                    speed: 1,
+                                    direction: "none",
+                                    random: true,
+                                    straight: true,
+                                    out_mode: "bounce",
+                                    bounce: true,
+                                    attract: {
+                                        enable: true,
+                                        rotateX: 3000,
+                                        rotateY: 1500,
+                                    }
+
                                 }
                                 }
                                 
@@ -81,8 +100,8 @@ export default class Home extends Component {
                             
                             <div style={{width:"50%", margin: "auto"}}>
                             </div>
-                            <p style={{color: "#9FA7BE", fontSize:"1.8em", width: "50%", margin:"auto", textAlign:"center"}}>Full Stack Software Engineer, Corona Engineering Ltd.</p>
-                            <p style={{color: "#9FA7BE", fontSize:"1.3em", width: "50%", margin:"auto", textAlign:"center"}}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites with firebase, nodejs, expressJs and all other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal sslCommerz etc.</p>
+                            <p style={{color: "#9FA7BE", fontSize:"1.8em", width: "80%", margin:"auto", textAlign:"center"}}>Full Stack Software Engineer, Corona Engineering Ltd.</p>
+                            <p style={{color: "#9FA7BE", fontSize:"1.3em", width: "80%", margin:"auto", textAlign:"center"}}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites with firebase, nodejs, expressJs and all other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal sslCommerz etc.</p>
                             </header>
                     </div>
                         
