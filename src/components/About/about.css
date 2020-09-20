@@ -1,3 +1,4 @@
+/* About section */
 .AboutContainer{
     display: flex;
 }
@@ -38,13 +39,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
 .aboutMe{
     min-width: 55%;
     padding-left: 2%;
 }
 .aboutMe .aboutMeName{
-    color: #9FA7BE;
+    color: white;
+}
+.aboutMeName span{
+    color: #037BF9;
 }
 .aboutMe p{
     color: #9FA7BE;
@@ -56,3 +61,40 @@
 .cvDownloadButton{
     width: 50%;
 }
+
+/* services section */
+.servicesHeader{
+    width: 30%;
+    margin-top: 10%;
+}
+
+.servicesHeader h1{
+    color: white;
+}
+
+.serviceContents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.serviceContents h3{
+    font-size: 20px;
+    color: white;
+}
+.serviceContents p{
+    color: #9FA7BE;
+}
+
+.s_WebDesign,.s_WebDevelopment,.s_MobileAppDevelopment{
+    background-color: #191d2b;
+    width: 30%;
+    margin-right: 3%;
+    padding: 1.5%;
+    min-height: 200px;
+    border:1px solid #2e344e;
+    border-top: 5px solid #2e344e;
+}
+
+
