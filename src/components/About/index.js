@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import React, { Component } from 'react'
 import { Button } from 'react-bootstrap';
 import { CodeBlock, dracula } from "react-code-blocks";
@@ -89,21 +90,21 @@ export default class Myself extends Component {
 
                   <div className="serviceContents">
                     <div className="s_WebDesign">
-                    <FontAwesomeIcon icon={["fal", "coffee"]} />
+                    <FontAwesomeIcon icon={faCode} color="#037BF9" />
                       <h3>Web Design</h3>
                       <hr />
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.</p>
                     </div>
 
                     <div className="s_WebDevelopment">
-                      <span>Icon</span>
+                      <FontAwesomeIcon icon={faCode} color="#037BF9" />
                       <h3>Web Development</h3>
                       <hr />
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.</p>
                     </div>
 
                     <div className="s_MobileAppDevelopment">
-                      <span>Icon</span>
+                      <FontAwesomeIcon icon={faCode} color="#037BF9" />
                       <h3>Mobile App</h3>
                       <hr />
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.</p>
