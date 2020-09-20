@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap';
 import { CodeBlock, dracula } from "react-code-blocks";
 import "./about.css";
 
@@ -75,6 +76,8 @@ export default class Myself extends Component {
                     <p>Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 26</p>
                     <p>Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Bangladesh</p>
                     <p>Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Dhanmondi,15, Dhaka-1209</p>
+                    <div className="cvDownloadButton"><Button variant="primary" block> DOWNLOAD CV</Button></div>
+
                   </div>
                 </div>
                 
