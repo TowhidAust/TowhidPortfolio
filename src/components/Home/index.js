@@ -105,7 +105,7 @@ export default class Home extends Component {
                             <div style={{width:"50%", margin: "auto"}}>
                             </div>
                             <p style={{color: "#9FA7BE", fontSize:"1.8em", width: "80%", margin:"auto", textAlign:"center"}}>Full Stack Software Engineer, Corona Engineering Ltd.</p>
-                            <p style={{ color: "#9FA7BE", fontSize: "1.3em", width: "80%", margin: "auto", textAlign: "center" }}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites and hybrid mobile apps with firebase, nodejs, expressJs and all other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal, sslCommerz etc.</p>
+                            <p style={{ color: "#9FA7BE", fontSize: "1.3em", width: "80%", margin: "auto", textAlign: "center" }}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites and hybrid mobile apps with firebase, nodejs, expressJs and other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal, sslCommerz etc. I also keep myself updated with latest technologies and frameworks.</p>
 
                             <div className="socialIcons">
 

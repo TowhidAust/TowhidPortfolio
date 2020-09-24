@@ -15,7 +15,7 @@
     background-size: cover; */
 }
 .aboutMeImage{
-   min-width: 35%;
+   width: 35%;
 }
 .aboutMeImage .ownImage{
     width: 100%;
@@ -39,13 +39,14 @@
 
 .aboutMeAndDetailsCont{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 5%;
+    flex-flow: wrap;
 }
 
 .aboutMe{
-    min-width: 55%;
+    width: 55%;
     padding-left: 2%;
 }
 .aboutMe .aboutMeName{
@@ -95,7 +96,7 @@
     width: 30%;
     margin-right: 3%;
     padding: 1.5%;
-    min-height: 200px;
+    min-height: 300px;
     border:1px solid #2e344e;
     border-top: 5px solid #2e344e;
 }
