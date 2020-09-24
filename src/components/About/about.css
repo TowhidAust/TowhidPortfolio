@@ -19,8 +19,9 @@
 }
 .aboutMeImage .ownImage{
     width: 100%;
-   max-height: 500px;
-
+   max-height: 600px;
+   border: 8px solid #fff;
+   border-radius: 5px;
 }
 .aboutHeadingContainer{
     width: 30%;
@@ -35,12 +36,14 @@
 .aboutHeading{
     color: white;
 }
+
 .aboutMeAndDetailsCont{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
 }
+
 .aboutMe{
     min-width: 55%;
     padding-left: 2%;

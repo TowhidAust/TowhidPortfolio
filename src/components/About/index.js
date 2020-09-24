@@ -46,7 +46,7 @@ export default class Myself extends Component {
         );
     }
   render() {
-    if (this.state.isDataLoaded = false) {
+    if (this.state.isDataLoaded === false) {
       return (
         <div>
           <p>The state is empty</p>
@@ -66,16 +66,17 @@ export default class Myself extends Component {
               
                 <div className="aboutMeAndDetailsCont">
                   <div className="aboutMeImage">
-                    <img alt="myImage" className="ownImage" src="http://chester.nuclearthemes.com/images/about-image.jpg" />
+                    <img alt="myImage" className="ownImage" src="https://scontent.fdac99-1.fna.fbcdn.net/v/t1.0-9/104769815_3021715104586892_4985599325527377232_o.jpg?_nc_cat=109&_nc_sid=174925&_nc_eui2=AeGoWScu5iLBUFI1fLwh0dFzw4VutkH7IDnDhW62QfsgObXRlz2fnrJLbBPzPlXx8oE04MtpxQUp4hUCys3as-7q&_nc_ohc=3oHvNWaTv_YAX9S-W_4&_nc_ht=scontent.fdac99-1.fna&oh=8379931a2a385a85fbeb31a05e784cd8&oe=5F908F3C" />
                   </div>
 
                   <div className="aboutMe">
                     <h1 className="aboutMeName">I am <span> Md. Towhidul Islam</span></h1>
-                    <p>I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</p>
-                    <p>FullName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Md. Towhidul Islam</p>
-                    <p>Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 26</p>
-                    <p>Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Bangladesh</p>
+                    <p> I have experience with almost 2 years. Worked with latest javascript and it's frameworks. I am a javascript lover. I follow all the software stacks with javascript and it's frameworks. In future i want to move on to machine learning and AI with tensorflow and python. </p>
+                    
+                    <p>Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Bangladeshi</p>
                     <p>Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Dhanmondi,15, Dhaka-1209</p>
+                    <p>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: towhidaustcse33@gmail.com</p>
+                    <p>Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 01737010194</p>
                     <div className="cvDownloadButton"><Button variant="primary" block> DOWNLOAD CV</Button></div>
 
                   </div>

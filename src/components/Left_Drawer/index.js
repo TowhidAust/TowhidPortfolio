@@ -16,7 +16,7 @@ export default function LeftDrawer() {
     let route = window.location.pathname;
     setstate({...isActive, Home: false, About: false, isActiveRoute: route});
     console.log(route);
-    
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   function clickHandlerHome(){
@@ -44,8 +44,6 @@ export default function LeftDrawer() {
   function activeStateHomeAccordingToRoute(){
     if(isActive.isActiveRoute === "/"){
       return "active"
-    }else{
-
     }
   }
 

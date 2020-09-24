@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Particles from 'react-particles-js';
 import { CopyBlock, dracula } from "react-code-blocks";
 import { FiFacebook } from 'react-icons/fi';
+import {AiFillGithub} from 'react-icons/ai';
+import {FiLinkedin} from 'react-icons/fi';
+import "./home.css";
 
 export default class Home extends Component {
 
@@ -102,19 +105,21 @@ export default class Home extends Component {
                             <div style={{width:"50%", margin: "auto"}}>
                             </div>
                             <p style={{color: "#9FA7BE", fontSize:"1.8em", width: "80%", margin:"auto", textAlign:"center"}}>Full Stack Software Engineer, Corona Engineering Ltd.</p>
-                            <p style={{ color: "#9FA7BE", fontSize: "1.3em", width: "80%", margin: "auto", textAlign: "center" }}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites with firebase, nodejs, expressJs and all other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal sslCommerz etc.</p>
+                            <p style={{ color: "#9FA7BE", fontSize: "1.3em", width: "80%", margin: "auto", textAlign: "center" }}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites and hybrid mobile apps with firebase, nodejs, expressJs and all other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal, sslCommerz etc.</p>
 
                             <div className="socialIcons">
 
                                 
-                                <a className="fbIconAnchor" href="http://google.com" target="_blank">
+                                <a className="fbIconAnchor" href="https://www.facebook.com/towhidulislam.007/" target="_blank" rel="noopener noreferrer">
                                 <FiFacebook className="fbIcon"/>
                                 </a>
-                                <a className="fbIconAnchor" href="http://google.com" target="_blank">
-                                <FiFacebook className="fbIcon"/>
+                                
+                                <a className="fbIconAnchor" href="https://github.com/TowhidAust" target="_blank" rel="noopener noreferrer">
+                                <AiFillGithub className="fbIcon"/>
                                 </a>
-                                <a className="fbIconAnchor" href="http://google.com" target="_blank">
-                                <FiFacebook className="fbIcon"/>
+
+                                <a className="fbIconAnchor" href="https://www.linkedin.com/in/md-towhidul-islam-951988160/" target="_blank" rel="noopener noreferrer">
+                                <FiLinkedin className="fbIcon"/>
                                 </a>
                             </div>
                             
