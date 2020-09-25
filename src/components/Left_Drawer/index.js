@@ -1,63 +1,148 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import "./left_drawer.css";
+import { FaBars } from 'react-icons/fa';
 
 
 export default function LeftDrawer() {
   
   const [isActive, setstate] = useState({
-    isActiveRoute: "/",
-    Home: true,
-    About: false
+    isActiveRoute: false,
+    Home: false,
+    About: false,
+    Resume: false,
+    Portfolio: false,
+    Blog: false,
+    Contact: false
   })
 
   useEffect(() => {
+    // debugger;
     console.log("useEffect triggers");
+    console.log('isActive state', isActive);
+    // debugger;
     let route = window.location.pathname;
-    setstate({...isActive, Home: false, About: false, isActiveRoute: route});
+    setstate({
+      ...isActive,
+      isActiveRoute: route,
+      Home: false,
+      About: false,
+      Resume: false,
+      Portfolio: false,
+      Blog: false,
+      Contact: false
+    });
     console.log(route);
      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  function clickHandlerHome(){
-    setstate({...isActive, Home: true, About: false, isActiveRoute: false});
-  }
 
-
-
-  function clickHandlerAbout(){
-    setstate({...isActive, Home: false, About: true, isActiveRoute: false});
-  }
-
-  function activeStateHomeHandler(){
-    if(isActive.Home){
-      return "active"
+  function navigationClickHandler(state) {
+    if (state === 'Home') {    
+      setstate({
+        ...isActive,
+        isActiveRoute: false,
+        Home: true,
+        About: false,
+        Resume: false,
+        Portfolio: false,
+        Blog: false,
+        Contact: false,
+      });
+    } else if (state === 'About') {
+      setstate({
+        ...isActive,
+        isActiveRoute: false,
+        Home: false,
+        About: true,
+        Resume: false,
+        Portfolio: false,
+        Blog: false,
+        Contact: false,
+      });
+    } else if(state === 'Resume'){
+      setstate({
+        ...isActive,
+        isActiveRoute: false,
+        Home: false,
+        About: false,
+        Resume: true,
+        Portfolio: false,
+        Blog: false,
+        Contact: false,
+      });
+    } else if (state === 'Portfolio') {
+      setstate({
+        ...isActive,
+        isActiveRoute: false,
+        Home: false,
+        About: false,
+        Resume: false,
+        Portfolio: true,
+        Blog: false,
+        Contact: false,
+      });
+    } else if (state === 'Blog') {
+      setstate({
+        ...isActive,
+        isActiveRoute: false,
+        Home: false,
+        About: false,
+        Resume: false,
+        Portfolio: false,
+        Blog: true,
+        Contact: false,
+      });
+    } else if (state === 'Contact') {
+      setstate({
+        ...isActive,
+        isActiveRoute: false,
+        Home: false,
+        About: false,
+        Resume: false,
+        Portfolio: false,
+        Blog: false,
+        Contact: true,
+      });
     }
   }
 
-  function activeStateAboutHandler(){
-    if(isActive.About){
-      return "active"
+// Now set the active state according to route and onload
+  function activeStateHandler(state_) {
+    if (state_ === 'Home') {
+      if (isActive.Home || isActive.isActiveRoute === "/") {
+        return 'active';
+      }
+    } else if (state_ === 'About') {
+      if (isActive.About || isActive.isActiveRoute === "/About") {
+        return 'active';
+      }
     }
-  }
-
-  function activeStateHomeAccordingToRoute(){
-    if(isActive.isActiveRoute === "/"){
-      return "active"
-    }
-  }
-
-  function activeStateAboutAccordingToRoute(){
-    if(isActive.isActiveRoute === "/About"){
-      return "active"
-    }else{
-      
-    }
+    else if (state_ === 'Resume') {
+      if(isActive.Resume || isActive.isActiveRoute === "/Resume") {
+        return 'active';
+      }
+    } else if (state_ === 'Portfolio') {
+      if(isActive.Portfolio || isActive.isActiveRoute === "/Portfolio") {
+        return 'active';
+      }
+    } else if (state_ === 'Blog') {
+      if(isActive.Blog || isActive.isActiveRoute === "/Blog") {
+        return 'active';
+      }
+    } else if (state_ === 'Contact') {
+      if(isActive.Contact || isActive.isActiveRoute === "/Contact") {
+        return 'active';
+      }
+     }
   }
 
   return (
     
-    <div  className="left_drawer_container">
+    <div className="left_drawer_container">
+      <div className="collapseIcon">
+          <div><FaBars/></div>
+      </div>
         <div className="avatar_image_div">
           <div className="myImageAnchor">
             <img alt="MyImage" className="myImage" src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" />
@@ -65,11 +150,12 @@ export default function LeftDrawer() {
           </div>
         <hr/>
         <ul className="left_drawer_ul">
-            <li><Link  className={`${activeStateHomeAccordingToRoute()} ${activeStateHomeHandler()}`} onClick={()=>{clickHandlerHome()}} to={"/"} >Home</Link></li>
-            <li><Link className={`${activeStateAboutAccordingToRoute()} ${activeStateAboutHandler()}`} onClick={()=>{clickHandlerAbout()}} to={"/About"}>About</Link></li>
-            <li><Link to="/">Portfolio</Link></li>
-            <li><Link to="/">Blog</Link></li>
-            <li><Link to="/">Techs</Link></li>
+            <li><Link  className={`${activeStateHandler('Home')}`} onClick={()=>{navigationClickHandler('Home')}} to={"/"} >Home</Link></li>
+            <li><Link className={`${activeStateHandler('About')}`} onClick={()=>{navigationClickHandler('About')}} to={"/About"}>About</Link></li>
+            <li><Link className={`${activeStateHandler('Resume')}`} onClick={()=>{navigationClickHandler('Resume')}} to={"/Resume"}>Resume</Link></li>
+            <li><Link className={`${activeStateHandler('Portfolio')}`} onClick={()=>{navigationClickHandler('Portfolio')}}  to={"/Portfolio"}>Portfolio</Link></li>
+            <li><Link className={`${activeStateHandler('Blog')}`} onClick={()=>{navigationClickHandler('Blog')}} to={"/Blog"}>Blog</Link></li>
+            <li><Link className={`${activeStateHandler('Contact')}`} onClick={()=>{navigationClickHandler('Contact')}} to={"/Contact"}>Contact</Link></li>
         </ul>
     </div>
   

@@ -1,15 +1,15 @@
 /* About section */
 .AboutContainer{
     display: flex;
-}
-.aboutContents{
     background-color: #10121B;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     width: 80%;
     margin-left: 20%;
     min-height: 100vh;
+}
+.aboutContents{
+    
     /* background-image: url(https://images.unsplash.com/photo-1556388275-bb5585725aca?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
     background-repeat: no-repeat;
     background-size: cover; */

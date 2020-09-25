@@ -47,12 +47,10 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div>
+           
                <div className="particle_banner">
                     <div className="particle_div">
-                        <div className="collapse_icon" onClick={()=>{
-                        alert('This is click alert');
-                        }}>Collapse</div>
+                        
                         <Particles
                             style={{backgroundColor: '#10121B'}}
                             width="100%"
@@ -128,7 +126,7 @@ export default class Home extends Component {
                         
                     
                     </div> 
-            </div>
+          
         )
     }
 }

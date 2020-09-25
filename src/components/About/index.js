@@ -54,7 +54,7 @@ export default class Myself extends Component {
         )
     } else {
       return (
-        <div>
+     
           <div className="AboutContainer">
             <div className="aboutContents">
               <div className="aboutContentsInner">
@@ -115,7 +115,6 @@ export default class Myself extends Component {
                 </section>
               </div>
             </div>
-          </div>
           </div>
       )
       

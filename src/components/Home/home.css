@@ -1,13 +1,13 @@
 
 .particle_banner{
     display: flex;
-  }
-  .particle_div{
     width: 80%;
     margin-left: 20%;
     height: 100vh;
-    background: red;
     position: relative;
+  }
+  .particle_div{
+    width: 100%;
   }
   .particle_contents{
     position: absolute;

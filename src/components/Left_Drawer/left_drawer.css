@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    width: 20%;
+    width: 20vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -82,12 +82,27 @@
     visibility: visible;
 }
 
-.left_drawer_ul a:active{}
-
 .myImageAnchor{
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* collapse icon */
+.collapseIcon{
+    color: white;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 100%;
+    width: 59px;
+    border: 1px solid grey;
+    background-color: #191D2B;
+    padding: 2% 2% 4% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
