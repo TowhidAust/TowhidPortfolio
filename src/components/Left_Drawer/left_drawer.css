@@ -14,11 +14,15 @@
 /* Avatar image */
 .avatar_image_div{
     margin-bottom: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .avatar_image_div img{
     max-width: 100%;
     max-height: 100%;
     border-radius: 100%;
+    border: 10px solid #fff;
 
 }
 
@@ -84,6 +88,7 @@
 
 .myImageAnchor{
     height: 200px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;

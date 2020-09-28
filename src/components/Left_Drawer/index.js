@@ -4,6 +4,7 @@ import "./left_drawer.css";
 import { FaBars } from 'react-icons/fa';
 
 
+
 export default function LeftDrawer() {
   
   const [isActive, setstate] = useState({
@@ -18,8 +19,8 @@ export default function LeftDrawer() {
 
   useEffect(() => {
     // debugger;
-    console.log("useEffect triggers");
-    console.log('isActive state', isActive);
+    // console.log("useEffect triggers");
+    // console.log('isActive state', isActive);
     // debugger;
     let route = window.location.pathname;
     setstate({
@@ -145,7 +146,7 @@ export default function LeftDrawer() {
       </div>
         <div className="avatar_image_div">
           <div className="myImageAnchor">
-            <img alt="MyImage" className="myImage" src="https://koolinus.files.wordpress.com/2019/03/avataaars-e28093-koolinus-1-12mar2019.png" />
+            <img src = "/towhid.jpg" alt="MyImage" className="myImage"  />
           </div>
           </div>
         <hr/>
