@@ -145,12 +145,11 @@ export default function LeftDrawer() {
       <div className="collapseIcon">
           <div><FaBars/></div>
       </div>
-        <div className="avatar_image_div">
-          <div className="myImageAnchor">
-            <img src = {logo} alt="MyImage" className="myImage"  />
+          <div className="avatar_image_div">
+            <div className="myImageAnchor">
+              <img src = {logo} alt="MyImage" className="myImage"  />
+            </div>
           </div>
-          </div>
-        <hr/>
         <ul className="left_drawer_ul">
             <li><Link  className={`${activeStateHandler('Home')}`} onClick={()=>{navigationClickHandler('Home')}} to={"/"} >Home</Link></li>
             <li><Link className={`${activeStateHandler('About')}`} onClick={()=>{navigationClickHandler('About')}} to={"/About"}>About</Link></li>
@@ -159,6 +158,8 @@ export default function LeftDrawer() {
             <li><Link className={`${activeStateHandler('Blog')}`} onClick={()=>{navigationClickHandler('Blog')}} to={"/Blog"}>Blog</Link></li>
             <li><Link className={`${activeStateHandler('Contact')}`} onClick={()=>{navigationClickHandler('Contact')}} to={"/Contact"}>Contact</Link></li>
         </ul>
+       
+        <div className="copyrightSection">&copy; Md. Towhidul Islam</div>
     </div>
   
   );

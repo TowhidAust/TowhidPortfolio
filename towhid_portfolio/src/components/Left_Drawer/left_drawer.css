@@ -7,21 +7,23 @@
     z-index: 1;
     width: 20vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
 
 /* Avatar image */
 .avatar_image_div{
-    margin-bottom: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 6%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6%;
 }
 .avatar_image_div img{
     max-width: 100%;
     max-height: 100%;
-    border-radius: 10px;
+    border-radius: 100%;
     border: 1px solid #fff;
 
 }
@@ -109,5 +111,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.copyrightSection {
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 6%;
+    padding-bottom: 6%;
 }
 
