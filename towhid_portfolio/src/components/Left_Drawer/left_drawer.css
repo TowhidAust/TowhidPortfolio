@@ -31,6 +31,7 @@
 /* Drawer ul navigation tools */
 .left_drawer_ul{
     padding: 0;
+
 }
 
 .left_drawer_ul li{
@@ -107,7 +108,7 @@
     border: 1px solid grey;
     background-color: #191D2B;
     padding: 2% 2% 4% 2%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;

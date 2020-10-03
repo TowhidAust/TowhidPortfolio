@@ -3,4 +3,15 @@
     width: 80%;
     margin-left: 20%;
     min-height: 100vh;
+    padding: 5%;
+}
+
+.skillHeadingCont{
+    width: 30%;
+}
+.mySkillsHeading{
+    color: #ffffff;
+}
+.skillDetails{
+    color: #ffffff;
 }
