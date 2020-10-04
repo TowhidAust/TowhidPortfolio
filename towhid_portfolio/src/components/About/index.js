@@ -7,7 +7,7 @@ import { Button } from 'react-bootstrap';
 import { CodeBlock, dracula } from "react-code-blocks";
 import "./about.css";
 import towhidCoat from "../../towhid_coat.png";
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 export default class About extends Component {
     constructor(props){
       super(props);
@@ -49,12 +49,13 @@ export default class Myself extends Component {
         );
     }
   render() {
-    if (this.state.isDataLoaded === false) {
+    if (!this.state.isDataLoaded) {
       return (
-        <div>
-          <p>The state is empty</p>
-          </div>
-        )
+        <div className="resumeContainer" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
+            <h3 style={{color:"#fff"}}>Please Wait...</h3>
+            <CircularProgress color="secondary" />
+        </div>
+      )
     } else {
       return (
      
