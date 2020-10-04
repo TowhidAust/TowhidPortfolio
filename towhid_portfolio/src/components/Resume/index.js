@@ -151,6 +151,54 @@ export default class Resume extends Component {
                                 
                             </div>
                         </section>
+
+                        {/* EducationalQualifications */}
+                        <section className="educationExperienceSection">
+                            <div className="educationExperienceHeader">
+                                <h1>Educational Qualifications</h1>
+                                <hr/>
+                            </div>
+                            <div className="educationDetailsCont">
+                                <div className="educationDetailsInner">
+                                    <div className="educationSummaryYear">
+                                        <h6> SSC - 2011 </h6>
+                                    </div>
+                                    <div className="educationDetails">
+                                        <h5 className="educationPosition">Full Stack Software Developer</h5>
+                                        <h6 className="educationCompany">Corona Engineering Ltd.</h6>
+                                        <p className="educationDescription">Currently working here as a fullstack developer. On early days i started with frontend development, but nowadays i am working with payment gateways, video streaming and other server side logics with Node js. Currently working with React Native.</p>
+                                    </div>
+
+                                </div>
+
+
+                                <div className="educationDetailsInner">
+                                    <div className="educationSummaryYear">
+                                        <h6> HSC - 2013 </h6>
+                                    </div>
+                                    <div className="educationDetails">
+                                        <h5 className="educationPosition">Frontend Developer</h5>
+                                        <h6 className="educationCompany">InfobizSoft</h6>
+                                        <p className="educationDescription">Started my career journey here as a frontend developer intern. Also worked here with PHP, MYSQL, BOOTSTRAP, JQUERY, WORDPRESS etc.</p>
+                                    </div>
+
+                                </div>
+                                
+                                <div className="educationDetailsInner">
+                                    <div className="educationSummaryYear">
+                                        <h6> BSc - 2013 </h6>
+                                    </div>
+                                    <div className="educationDetails">
+                                        <h5 className="educationPosition">Frontend Developer</h5>
+                                        <h6 className="educationCompany">InfobizSoft</h6>
+                                        <p className="educationDescription">Started my career journey here as a frontend developer intern. Also worked here with PHP, MYSQL, BOOTSTRAP, JQUERY, WORDPRESS etc.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        
                     </div>
                 </div>
             )
