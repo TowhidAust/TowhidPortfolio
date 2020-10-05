@@ -164,9 +164,9 @@ export default class Resume extends Component {
                                         <h6> SSC - 2011 </h6>
                                     </div>
                                     <div className="educationDetails">
-                                        <h5 className="educationPosition">Full Stack Software Developer</h5>
-                                        <h6 className="educationCompany">Corona Engineering Ltd.</h6>
-                                        <p className="educationDescription">Currently working here as a fullstack developer. On early days i started with frontend development, but nowadays i am working with payment gateways, video streaming and other server side logics with Node js. Currently working with React Native.</p>
+                                        <h5 className="educationPosition">Sarishabari RDM Pilot High School</h5>
+                                        <h6 className="educationCompany"> Science </h6>
+                                        <p className="educationDescription">GPA-5.00 out of 5.00</p>
                                     </div>
 
                                 </div>
@@ -177,9 +177,9 @@ export default class Resume extends Component {
                                         <h6> HSC - 2013 </h6>
                                     </div>
                                     <div className="educationDetails">
-                                        <h5 className="educationPosition">Frontend Developer</h5>
-                                        <h6 className="educationCompany">InfobizSoft</h6>
-                                        <p className="educationDescription">Started my career journey here as a frontend developer intern. Also worked here with PHP, MYSQL, BOOTSTRAP, JQUERY, WORDPRESS etc.</p>
+                                        <h5 className="educationPosition"> Birshreshtha Noor Mohammad Public College </h5>
+                                        <h6 className="educationCompany"> Science </h6>
+                                        <p className="educationDescription">GPA-5.00 out of 5.00</p>
                                     </div>
 
                                 </div>
@@ -189,9 +189,9 @@ export default class Resume extends Component {
                                         <h6> BSc - 2013 </h6>
                                     </div>
                                     <div className="educationDetails">
-                                        <h5 className="educationPosition">Frontend Developer</h5>
-                                        <h6 className="educationCompany">InfobizSoft</h6>
-                                        <p className="educationDescription">Started my career journey here as a frontend developer intern. Also worked here with PHP, MYSQL, BOOTSTRAP, JQUERY, WORDPRESS etc.</p>
+                                        <h5 className="educationPosition"> Ahsanullah University of Science & Technology </h5>
+                                        <h6 className="educationCompany">Department of Computer Science & Engineering </h6>
+                                        <p className="educationDescription"> CGPA-2.567 out of 4.00</p>
                                     </div>
 
                                 </div>

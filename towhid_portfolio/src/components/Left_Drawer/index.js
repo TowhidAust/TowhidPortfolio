@@ -6,7 +6,7 @@ import logo from "../../towhid.png";
 
 
 
-export default function LeftDrawer() {
+export default function LeftDrawer(props) {
   
   const [isActive, setstate] = useState({
     isActiveRoute: false,
@@ -19,10 +19,7 @@ export default function LeftDrawer() {
   })
 
   useEffect(() => {
-    // debugger;
-    // console.log("useEffect triggers");
-    // console.log('isActive state', isActive);
-    // debugger;
+    
     let route = window.location.pathname;
     setstate({
       ...isActive,
@@ -34,7 +31,6 @@ export default function LeftDrawer() {
       Blog: false,
       Contact: false
     });
-    console.log(route);
      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <div className="MainAppContainer"> 
-          <LeftDrawer/>     
+          <LeftDrawer name="towhid"/>     
             <Switch>
               <Route path="/" exact component={Home}></Route>
               <Route path="/About" exact component={About}></Route>
