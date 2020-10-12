@@ -1,0 +1,56 @@
+.portfolioContainer{
+    background-color: #10121B;;
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100vh;
+    padding: 5%;
+}
+
+.protfolioHeading{
+    width: 45%;
+    color: #ffffff;
+}
+
+
+
+/* services section */
+
+
+.portfolioDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.portfolioDetails h3{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top:5%;
+
+}
+.portfolioDetails p{
+    color: #9FA7BE;
+}
+
+.card_{
+    background-color: #191d2b;
+    width: 30%;
+    margin-right: 3%;
+    padding: 1.5%;
+    min-height: 290px;
+    border:1px solid #2e344e;
+    border-top: 5px solid #2e344e;
+}
+
+.portfolioImage{
+    width: 100%;
+}
+
+.portfolioImage img{
+    width: 100%;
+}
