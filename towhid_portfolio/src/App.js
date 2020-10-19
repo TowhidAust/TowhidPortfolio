@@ -14,7 +14,6 @@ import Contact from "./components/Contact";
 import LeftDrawer from './components/Left_Drawer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function App() {
   return (
     <Router>
