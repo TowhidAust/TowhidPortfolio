@@ -1,6 +1,12 @@
+// This import loads the firebase namespace along with all its type information.
+import * as firebase from "firebase/app";
 
-import _firebase from 'firebase';
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// These imports load individual services into the firebase namespace.
+
+import "firebase/auth";
+import "firebase/database";
+import "firebase/storage";
+
 const config = {
     apiKey: "AIzaSyBP0gvFfU6ky_H2DbhMApsqGD2A72IXKMg",
     authDomain: "towhidportfolioapp.firebaseapp.com",
@@ -12,7 +18,13 @@ const config = {
     measurementId: "G-BE319187TS"
 };
 
-// Initialize Firebase
-let firebase = _firebase.initializeApp(config);
+firebase.initializeApp(config);
+
+
+// Export the database, auth and firebase timestamp seperately for convenience
+export const database = firebase.database();
+export const auth = firebase.auth();
+export const storage = firebase.storage();
+export const serverTimestamp = firebase.database.ServerValue.TIMESTAMP;
 
 export default firebase;

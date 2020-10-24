@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+// import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import "./left_drawer.css";
 import { FaBars } from 'react-icons/fa';
@@ -6,23 +6,26 @@ import logo from "../../towhid.png";
 
 
 
-export default function LeftDrawer(props) {
-  
-  const [isActive, setstate] = useState({
-    isActiveRoute: false,
-    Home: false,
-    About: false,
-    Resume: false,
-    Portfolio: false,
-    Blog: false,
-    Contact: false
-  })
 
-  useEffect(() => {
-    
+import React, { Component } from 'react'
+
+export default class LeftDrawer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isDataLoaded: false,
+      isActiveRoute: false,
+      Home: false,
+      About: false,
+      Resume: false,
+      Portfolio: false,
+      Blog: false,
+      Contact: false
+    }
+  }
+  componentDidMount() {
     let route = window.location.pathname;
-    setstate({
-      ...isActive,
+    this.setState({
       isActiveRoute: route,
       Home: false,
       About: false,
@@ -31,14 +34,12 @@ export default function LeftDrawer(props) {
       Blog: false,
       Contact: false
     });
-     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }
 
-
-  function navigationClickHandler(state) {
+  navigationClickHandler(state) {
     if (state === 'Home') {    
-      setstate({
-        ...isActive,
+      this.setState({
+        
         isActiveRoute: false,
         Home: true,
         About: false,
@@ -48,8 +49,8 @@ export default function LeftDrawer(props) {
         Contact: false,
       });
     } else if (state === 'About') {
-      setstate({
-        ...isActive,
+      this.setState({
+        
         isActiveRoute: false,
         Home: false,
         About: true,
@@ -59,8 +60,8 @@ export default function LeftDrawer(props) {
         Contact: false,
       });
     } else if(state === 'Resume'){
-      setstate({
-        ...isActive,
+      this.setState({
+ 
         isActiveRoute: false,
         Home: false,
         About: false,
@@ -70,8 +71,8 @@ export default function LeftDrawer(props) {
         Contact: false,
       });
     } else if (state === 'Portfolio') {
-      setstate({
-        ...isActive,
+      this.setState({
+
         isActiveRoute: false,
         Home: false,
         About: false,
@@ -81,8 +82,8 @@ export default function LeftDrawer(props) {
         Contact: false,
       });
     } else if (state === 'Blog') {
-      setstate({
-        ...isActive,
+      this.setState({
+  
         isActiveRoute: false,
         Home: false,
         About: false,
@@ -92,8 +93,8 @@ export default function LeftDrawer(props) {
         Contact: false,
       });
     } else if (state === 'Contact') {
-      setstate({
-        ...isActive,
+      this.setState({
+    
         isActiveRoute: false,
         Home: false,
         About: false,
@@ -105,39 +106,40 @@ export default function LeftDrawer(props) {
     }
   }
 
-// Now set the active state according to route and onload
-  function activeStateHandler(state_) {
+  // Now set the active state according to route and onload
+  activeStateHandler(state_) {
     if (state_ === 'Home') {
-      if (isActive.Home || isActive.isActiveRoute === "/") {
+      if (this.state.Home || this.state.isActiveRoute === "/") {
         return 'active';
       }
     } else if (state_ === 'About') {
-      if (isActive.About || isActive.isActiveRoute === "/About") {
+      if (this.state.About || this.state.isActiveRoute === "/About") {
         return 'active';
       }
     }
     else if (state_ === 'Resume') {
-      if(isActive.Resume || isActive.isActiveRoute === "/Resume") {
+      if(this.state.Resume || this.state.isActiveRoute === "/Resume") {
         return 'active';
       }
     } else if (state_ === 'Portfolio') {
-      if(isActive.Portfolio || isActive.isActiveRoute === "/Portfolio") {
+      if(this.state.Portfolio || this.state.isActiveRoute === "/Portfolio") {
         return 'active';
       }
     } else if (state_ === 'Blog') {
-      if(isActive.Blog || isActive.isActiveRoute === "/Blog") {
+      if(this.state.Blog || this.state.isActiveRoute === "/Blog") {
         return 'active';
       }
     } else if (state_ === 'Contact') {
-      if(isActive.Contact || isActive.isActiveRoute === "/Contact") {
+      if(this.state.Contact || this.state.isActiveRoute === "/Contact") {
         return 'active';
       }
      }
   }
 
-  return (
-    
-    <div className="left_drawer_container">
+
+  render() {
+    return (
+      <div className="left_drawer_container">
       <div className="collapseIcon">
           <div><FaBars/></div>
       </div>
@@ -150,16 +152,16 @@ export default function LeftDrawer(props) {
             </div>
           </div>
         <ul className="left_drawer_ul">
-            <li><Link  className={`${activeStateHandler('Home')}`} onClick={()=>{navigationClickHandler('Home')}} to={"/"} >Home</Link></li>
-            <li><Link className={`${activeStateHandler('About')}`} onClick={()=>{navigationClickHandler('About')}} to={"/About"}>About</Link></li>
-            <li><Link className={`${activeStateHandler('Resume')}`} onClick={()=>{navigationClickHandler('Resume')}} to={"/Resume"}>Resume</Link></li>
-            <li><Link className={`${activeStateHandler('Portfolio')}`} onClick={()=>{navigationClickHandler('Portfolio')}}  to={"/Portfolio"}>Portfolio</Link></li>
-            <li><Link className={`${activeStateHandler('Blog')}`} onClick={()=>{navigationClickHandler('Blog')}} to={"/Blog"}>Blog</Link></li>
-            <li><Link className={`${activeStateHandler('Contact')}`} onClick={() => { navigationClickHandler('Contact') }} to={"/Contact"}>Contact</Link></li>
+            <li><Link  className={`${this.activeStateHandler('Home')}`} onClick={()=>{this.navigationClickHandler('Home')}} to={"/"} >Home</Link></li>
+            <li><Link className={`${this.activeStateHandler('About')}`} onClick={()=>{this.navigationClickHandler('About')}} to={"/About"}>About</Link></li>
+            <li><Link className={`${this.activeStateHandler('Resume')}`} onClick={()=>{this.navigationClickHandler('Resume')}} to={"/Resume"}>Resume</Link></li>
+            <li><Link className={`${this.activeStateHandler('Portfolio')}`} onClick={()=>{this.navigationClickHandler('Portfolio')}}  to={"/Portfolio"}>Portfolio</Link></li>
+            <li><Link className={`${this.activeStateHandler('Blog')}`} onClick={()=>{this.navigationClickHandler('Blog')}} to={"/Blog"}>Blog</Link></li>
+            <li><Link className={`${this.activeStateHandler('Contact')}`} onClick={() => { this.navigationClickHandler('Contact') }} to={"/Contact"}>Contact</Link></li>
         </ul>
        
         <div className="copyrightSection">&copy; Md. Towhidul Islam</div>
     </div>
-  
-  );
+    )
+  }
 }

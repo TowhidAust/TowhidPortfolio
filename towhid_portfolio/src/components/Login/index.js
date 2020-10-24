@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { Button } from 'react-bootstrap';
 import './login.css';
 import {AiOutlineUserAdd} from 'react-icons/ai'
-import firebase from '../../firebase';
 import { CircularProgress } from '@material-ui/core';
-import database from '../../firebase';
+import { auth, database } from '../../firebase';
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -18,8 +17,8 @@ export default class Login extends Component {
 
     componentDidMount() {
         let thisComponent = this;
-        firebase.auth().signOut();
-        firebase.auth().onAuthStateChanged(function(user) {
+            auth.signOut();
+            auth.onAuthStateChanged(function(user) {
             if (user) {
                 thisComponent.setState({
                     isUserLoggedIn: true
@@ -63,7 +62,7 @@ export default class Login extends Component {
     loginAdmin(event) {
         let email = this.state.email;
         let password = this.state.password;
-        firebase.auth().signInWithEmailAndPassword(email, password).then(user => {
+        auth.signInWithEmailAndPassword(email, password).then(user => {
             // send this user to homepage
             database.ref('/').update({
                 email: email,

@@ -5,10 +5,9 @@ import { FiFacebook } from 'react-icons/fi';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiLinkedin } from 'react-icons/fi';
 import "./home.css";
-import firebase from '../../firebase';
 import { CircularProgress } from '@material-ui/core';
 import { FaPencilAlt } from 'react-icons/fa';
-let database = firebase.database();
+import { database } from '../../firebase';
 
 export default class Home extends Component {
 
