@@ -143,7 +143,10 @@ export default function LeftDrawer(props) {
       </div>
           <div className="avatar_image_div">
             <div className="myImageAnchor">
-              <img src = {logo} alt="MyImage" className="myImage"  />
+                <img src={logo} alt="MyImage" className="myImage" />
+            </div>
+            <div style={{fontSize:"1.5em", width:"100%", textAlign:"center", marginTop:"3%"}}>
+              <Link to={"/Login"} style={{color:"white", textDecoration:"none"}}>Admin</Link>
             </div>
           </div>
         <ul className="left_drawer_ul">
@@ -152,7 +155,7 @@ export default function LeftDrawer(props) {
             <li><Link className={`${activeStateHandler('Resume')}`} onClick={()=>{navigationClickHandler('Resume')}} to={"/Resume"}>Resume</Link></li>
             <li><Link className={`${activeStateHandler('Portfolio')}`} onClick={()=>{navigationClickHandler('Portfolio')}}  to={"/Portfolio"}>Portfolio</Link></li>
             <li><Link className={`${activeStateHandler('Blog')}`} onClick={()=>{navigationClickHandler('Blog')}} to={"/Blog"}>Blog</Link></li>
-            <li><Link className={`${activeStateHandler('Contact')}`} onClick={()=>{navigationClickHandler('Contact')}} to={"/Contact"}>Contact</Link></li>
+            <li><Link className={`${activeStateHandler('Contact')}`} onClick={() => { navigationClickHandler('Contact') }} to={"/Contact"}>Contact</Link></li>
         </ul>
        
         <div className="copyrightSection">&copy; Md. Towhidul Islam</div>

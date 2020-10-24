@@ -19,6 +19,7 @@
     margin-top: 6%;
     border-bottom: 1px solid #ddd;
     padding-bottom: 6%;
+    flex-direction: column;
 }
 .avatar_image_div img{
     max-width: 100%;
