@@ -2,20 +2,28 @@ import React, { Component } from 'react'
 import Particles from 'react-particles-js';
 import { CopyBlock, dracula } from "react-code-blocks";
 import { FiFacebook } from 'react-icons/fi';
-import {AiFillGithub} from 'react-icons/ai';
-import {FiLinkedin} from 'react-icons/fi';
+import { AiFillGithub } from 'react-icons/ai';
+import { FiLinkedin } from 'react-icons/fi';
 import "./home.css";
+import firebase from '../../firebase';
+import { CircularProgress } from '@material-ui/core';
+import { FaPencilAlt } from 'react-icons/fa';
+let database = firebase.database();
 
 export default class Home extends Component {
 
     constructor(props){
         super(props);
-        this.state = {date: new Date()}
+        this.state = {
+            isDataLoaded: false,
+            isUserLoggedIn: false,
+        }
     }
     
     componentDidMount(){
 
         // this.MyCoolCodeBlock();
+        this.getDataFromDatabase();
     }
 
     MyCoolCodeBlock() {
@@ -41,92 +49,130 @@ export default class Home extends Component {
             theme={dracula}
           />
         );
-      }
+    }
+    
+    getDataFromDatabase() {
+        database.ref('/').once('value').then(snapshot => {
+            let snapshotVal = snapshot.val();
+            let name = snapshot.val().home.name;
+            let position = snapshot.val().home.position;
+            let subtitle = snapshot.val().home.subtitle;
+            let isUserLoggedIn = snapshot.val().isUserLoggedIn;
+            this.setState({
+                name: name,
+                position: position,
+                subtitle: subtitle,
+                isDataLoaded: true,
+                isUserLoggedIn: isUserLoggedIn
+            })
+        })
+    }
+
+
+    loadEditIcons() {
+        if (this.state.isUserLoggedIn) {
+            return (
+                <>
+                    <FaPencilAlt style={{cursor:"pointer"}}/>
+                </>
+            )
+        }
+    }
 
  
 
     render() {
-        return (
-           
-               <div className="particle_banner">
-                    <div className="particle_div">
-                        
-                        <Particles
-                            style={{backgroundColor: '#10121B'}}
-                            width="100%"
-                            height="100vh"
-                            params={{
-                            particles: {
-                                color: {
-                                    value: "#9FA7BE"
-                                },
-                                line_linked: {
-                                    
+        if (this.state.isDataLoaded) {
+            return (
+               
+                   <div className="particle_banner">
+                        <div className="particle_div">
+                            
+                            <Particles
+                                style={{backgroundColor: '#10121B'}}
+                                width="100%"
+                                height="100vh"
+                                params={{
+                                particles: {
                                     color: {
-                                        value: "#10121B"
-                                    }
-                                },
-                                number: {
-                                    value: 100,
-                                    density: { 
-                                        enable: false, 
-                                        value_area: 500, 
-                                      }
-                                },
-                                size: {
-                                    value: 3
-                                },
-                                
-                                move: {
-                                    enable: true,
-                                    speed: 1,
-                                    direction: "none",
-                                    random: true,
-                                    straight: true,
-                                    out_mode: "bounce",
-                                    bounce: true,
-                                    attract: {
+                                        value: "#9FA7BE"
+                                    },
+                                    line_linked: {
+                                        
+                                        color: {
+                                            value: "#10121B"
+                                        }
+                                    },
+                                    number: {
+                                        value: 100,
+                                        density: { 
+                                            enable: false, 
+                                            value_area: 500, 
+                                          }
+                                    },
+                                    size: {
+                                        value: 3
+                                    },
+                                    
+                                    move: {
                                         enable: true,
-                                        rotateX: 3000,
-                                        rotateY: 1500,
+                                        speed: 1,
+                                        direction: "none",
+                                        random: true,
+                                        straight: true,
+                                        out_mode: "bounce",
+                                        bounce: true,
+                                        attract: {
+                                            enable: true,
+                                            rotateX: 3000,
+                                            rotateY: 1500,
+                                        }
+    
                                     }
-
-                                }
-                                }
+                                    }
+                                    
+                                }}
+                                />
+                                <header className="particle_contents">
                                 
-                            }}
-                            />
-                            <header className="particle_contents">
-                            
-                            <h1 className="name"> Hi, i am  <b style={{color:"#037BF9"}}> Md. Towhidul Islam</b> </h1>
-                            
-                            <div style={{width:"50%", margin: "auto"}}>
-                            </div>
-                            <p style={{color: "#9FA7BE", fontSize:"1.8em", width: "80%", margin:"auto", textAlign:"center"}}>Full Stack Software Engineer, Corona Engineering Ltd.</p>
-                            <p style={{ color: "#9FA7BE", fontSize: "1.3em", width: "80%", margin: "auto", textAlign: "center" }}>I am a fullstack developer. I can provide clean code and pixel perfect design. I can make dynamic websites and hybrid mobile apps with firebase, nodejs, expressJs and other modern javascript technologies like reactJs, reactNative etc. I can also integrate payment gateways like Paypal, sslCommerz etc. I also keep myself updated with latest technologies and frameworks.</p>
-
-                            <div className="socialIcons">
-
+                                <h1 className="name"> Hi, i am  <b style={{color:"#037BF9"}}> {this.state.name} </b> </h1>
                                 
-                                <a className="fbIconAnchor" href="https://www.facebook.com/towhidulislam.007/" target="_blank" rel="noopener noreferrer">
-                                <FiFacebook className="fbIcon"/>
-                                </a>
+                                <div style={{width:"50%", margin: "auto"}}>
+                                </div>
+                                    <p style={{ color: "#9FA7BE", fontSize: "1.8em", width: "80%", margin: "auto", textAlign: "center" }}>{this.state.position} {this.loadEditIcons()}                                </p>
+                                    <p style={{ color: "#9FA7BE", fontSize: "1.3em", width: "80%", margin: "auto", textAlign: "center" }}>{this.state.subtitle} {this.loadEditIcons()} </p>
+    
+                                <div className="socialIcons">
+    
+                                    
+                                    <a className="fbIconAnchor" href="https://www.facebook.com/towhidulislam.007/" target="_blank" rel="noopener noreferrer">
+                                    <FiFacebook className="fbIcon"/>
+                                    </a>
+                                    
+                                    <a className="fbIconAnchor" href="https://github.com/TowhidAust" target="_blank" rel="noopener noreferrer">
+                                    <AiFillGithub className="fbIcon"/>
+                                    </a>
+    
+                                    <a className="fbIconAnchor" href="https://www.linkedin.com/in/md-towhidul-islam-951988160/" target="_blank" rel="noopener noreferrer">
+                                    <FiLinkedin className="fbIcon"/>
+                                    </a>
+                                </div>
                                 
-                                <a className="fbIconAnchor" href="https://github.com/TowhidAust" target="_blank" rel="noopener noreferrer">
-                                <AiFillGithub className="fbIcon"/>
-                                </a>
-
-                                <a className="fbIconAnchor" href="https://www.linkedin.com/in/md-towhidul-islam-951988160/" target="_blank" rel="noopener noreferrer">
-                                <FiLinkedin className="fbIcon"/>
-                                </a>
-                            </div>
+                                </header>
+                        </div>
                             
-                            </header>
-                    </div>
                         
-                    
-                    </div> 
-          
-        )
+                        </div> 
+              
+            )
+            
+        } else {
+            return (
+                <div className="spinnerCss">
+                    <CircularProgress />
+                    <div>Please Wait..</div>
+                </div>
+            )
+        }
     }
 }

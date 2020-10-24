@@ -7,6 +7,18 @@
   pointer-events: none;
 }
 
+.spinnerCss{
+  display: flex;
+  background-color: #10121B;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 20%;
+  min-height: 100vh;
+  color: #9FA7BE;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
