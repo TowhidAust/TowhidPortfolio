@@ -17,17 +17,14 @@ export default class Login extends Component {
 
     componentDidMount() {
         let thisComponent = this;
-            auth.signOut();
-            auth.onAuthStateChanged(function(user) {
+       
+            let unsubscribe = auth.onAuthStateChanged(function(user) {
             if (user) {
                 thisComponent.setState({
                     isUserLoggedIn: true
                 });
         
                 console.log("is user logged in or not", user);
-
-                // send this user to homepage
-                
                 thisComponent.changeTheRoute();
               // ...
             } else {
@@ -40,8 +37,14 @@ export default class Login extends Component {
           
 
         this.setState({
-            isDataLoaded:true
+            isDataLoaded: true,
+            unsubscribe: unsubscribe
         })
+    }
+
+    componentWillUnmount() {
+        let unsubscribe = this.state.unsubscribe;
+        unsubscribe();
     }
     
     handleChangeEmail(event) {

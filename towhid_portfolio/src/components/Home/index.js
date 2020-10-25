@@ -52,7 +52,7 @@ export default class Home extends Component {
     
     getDataFromDatabase() {
         database.ref('/').once('value').then(snapshot => {
-            let snapshotVal = snapshot.val();
+            // let snapshotVal = snapshot.val();
             let name = snapshot.val().home.name;
             let position = snapshot.val().home.position;
             let subtitle = snapshot.val().home.subtitle;

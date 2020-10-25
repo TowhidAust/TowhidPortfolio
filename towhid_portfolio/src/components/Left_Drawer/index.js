@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import "./left_drawer.css";
 import { FaBars } from 'react-icons/fa';
 import logo from "../../towhid.png";
+import { auth, database } from '../../firebase';
+
 
 
 
@@ -14,6 +16,9 @@ export default class LeftDrawer extends Component {
     super(props);
     this.state = {
       isDataLoaded: false,
+      isUserLoggedIn: false,
+      logoutButtonDisplay: 'none',
+      adminButtonDisplay: 'none',
       isActiveRoute: false,
       Home: false,
       About: false,
@@ -34,6 +39,8 @@ export default class LeftDrawer extends Component {
       Blog: false,
       Contact: false
     });
+
+    this.loginLogoutButtonState();
   }
 
   navigationClickHandler(state) {
@@ -137,6 +144,31 @@ export default class LeftDrawer extends Component {
   }
 
 
+  loginLogoutButtonState() {
+    database.ref('/').once("value").then(snapshot => {
+      let isUserLoggedIn = snapshot.val().isUserLoggedIn;
+      console.log(isUserLoggedIn);
+      if (isUserLoggedIn) {
+        this.setState({
+          adminButtonText: 'Admin',
+          isUserLoggedIn: true,
+          logoutButtonDisplay: 'block',
+          adminButtonDisplay: 'none'
+        })
+      } else {
+        this.setState({
+          adminButtonText: 'Login as Admin',
+          isUserLoggedIn: false,
+          logoutButtonDisplay: 'none',
+          adminButtonDisplay: 'block'
+
+        })
+      }
+    });
+   
+  }
+
+
   render() {
     return (
       <div className="left_drawer_container">
@@ -147,8 +179,26 @@ export default class LeftDrawer extends Component {
             <div className="myImageAnchor">
                 <img src={logo} alt="MyImage" className="myImage" />
             </div>
+            <div style={{fontSize:"1.5em", width:"100%", textAlign:"center", marginTop:"3%", display:this.state.adminButtonDisplay}}>
+              <Link to={"/Login"} style={{color:"white", textDecoration:"none"}}>{this.state.adminButtonText}</Link>
+            </div>
+          
             <div style={{fontSize:"1.5em", width:"100%", textAlign:"center", marginTop:"3%"}}>
-              <Link to={"/Login"} style={{color:"white", textDecoration:"none"}}>Admin</Link>
+            <div style={{ color: "white", textDecoration: "none", cursor: "pointer", display: this.state.logoutButtonDisplay }} onClick={() => {
+              auth.signOut().then(snapshot => {
+              
+                console.log("user signed out");
+                database.ref('/').update({ isUserLoggedIn: false }).then(() => {
+                  window.location = '/Login'
+                  this.setState({
+                    isUserLoggedIn: false,
+                    logoutButtonDisplay: 'none'
+                  })
+                }).catch(err => {
+                  console.log(err);
+                })
+
+              })}}>Logout</div>
             </div>
           </div>
         <ul className="left_drawer_ul">
