@@ -1,0 +1,35 @@
+.contactSection{
+    background-color: #10121B;
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100vh;
+    padding: 5%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.contactCard{
+    background: url("https://image.freepik.com/free-vector/abstract-metallic-black-blue-frame-sport-design-concept-innovation-background_43969-1043.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #191d2b;
+    width: 35em;
+    margin: auto;
+    /* padding: 1.5%; */
+    /* border:1px solid #2e344e; */
+    /* border-top: 5px solid #2e344e; */
+    border-radius: 10px;
+}
+
+.contactCardInner{
+    background: rgba(16, 18, 27, 0.5);
+    min-height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

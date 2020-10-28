@@ -4,6 +4,7 @@ import './login.css';
 import {AiOutlineUserAdd} from 'react-icons/ai'
 import { CircularProgress } from '@material-ui/core';
 import { auth, database } from '../../firebase';
+import CircleAnimation from '../CircleAnimation';
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -90,6 +91,7 @@ export default class Login extends Component {
             return (
                 <>
                     <section>
+                        <CircleAnimation/>
                         <div className="loginSection">
                             <div className="normalLogin">
                                 <div className="normalLoginHeading">

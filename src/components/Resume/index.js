@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './resume.css';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import CircleAnimation from '../CircleAnimation';
 export default class Resume extends Component {
     constructor(props){
         super(props);
@@ -21,7 +22,8 @@ export default class Resume extends Component {
     render() {
         if(!this.state.isDataLoaded){
             return (
-                <div className="resumeContainer" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
+                <div className="resumeContainer" style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+                    <CircleAnimation/>
                     <h3 style={{color:"#fff"}}>Please Wait...</h3>
                     <CircularProgress color="secondary" />
                 </div>
@@ -30,6 +32,7 @@ export default class Resume extends Component {
         else {
             return (
                 <div className="resumeContainer">
+                    <CircleAnimation/>
                     <div className="resumeInner">
                         <section className="mySkillsSection">
                             <div className="skillHeadingCont">
@@ -190,7 +193,7 @@ export default class Resume extends Component {
                                     </div>
                                     <div className="educationDetails">
                                         <h5 className="educationPosition"> Ahsanullah University of Science & Technology </h5>
-                                        <h6 className="educationCompany">Department of Computer Science & Engineering </h6>
+                                        <h6 className="educationCompany">Computer Science & Engineering </h6>
                                         <p className="educationDescription"> CGPA-2.567 out of 4.00</p>
                                     </div>
 

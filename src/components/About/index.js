@@ -8,6 +8,7 @@ import { CodeBlock, dracula } from "react-code-blocks";
 import "./about.css";
 import towhidCoat from "../../towhid_coat.png";
 import CircularProgress from '@material-ui/core/CircularProgress';
+import CircleAnimation from '../CircleAnimation';
 export default class About extends Component {
     constructor(props){
       super(props);
@@ -52,14 +53,16 @@ export default class Myself extends Component {
     if (!this.state.isDataLoaded) {
       return (
         <div className="resumeContainer" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
-            <h3 style={{color:"#fff"}}>Please Wait...</h3>
+            <CircleAnimation/>
+            <h3 style={{ color: "#fff" }}>Please Wait...</h3>
             <CircularProgress color="secondary" />
         </div>
       )
     } else {
       return (
      
-          <div className="AboutContainer">
+        <div className="AboutContainer">
+            <CircleAnimation/>
             <div className="aboutContents">
               <div className="aboutContentsInner">
 
@@ -75,7 +78,7 @@ export default class Myself extends Component {
 
                   <div className="aboutMe">
                     <h1 className="aboutMeName">I am <span> Md. Towhidul Islam</span></h1>
-                    <p> I have experience with almost 2 years. Worked with latest javascript and it's frameworks. I am a javascript lover. I follow the software stacks with javascript and it's frameworks. In future i want to move on to machine learning and AI with tensorflow and python. My goal is to achieve all the capabilities of being a full stack developer.</p>
+                    <p> I have experience with almost 2 years. Worked with latest javascript and it's frameworks. I am a javascript lover. I follow the software stacks with javascript and it's frameworks. My goal is to achieve all the capabilities of being a full stack developer.</p>
                     <p>Full Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Md. Towhidul Islam</p>
                     <p>Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Bangladeshi</p>
                     <p>Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Dhanmondi,15, Dhaka-1209</p>

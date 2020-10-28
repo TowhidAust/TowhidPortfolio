@@ -8,6 +8,7 @@ import "./home.css";
 import { CircularProgress } from '@material-ui/core';
 import { FaPencilAlt } from 'react-icons/fa';
 import { database } from '../../firebase';
+import CircleAnimation from '../CircleAnimation';
 
 export default class Home extends Component {
 
@@ -84,7 +85,8 @@ export default class Home extends Component {
         if (this.state.isDataLoaded) {
             return (
                
-                   <div className="particle_banner">
+                <div className="particle_banner">
+                    
                         <div className="particle_div">
                             
                             <Particles
@@ -168,6 +170,7 @@ export default class Home extends Component {
         } else {
             return (
                 <div className="spinnerCss">
+                    <CircleAnimation/>
                     <CircularProgress />
                     <div>Please Wait..</div>
                 </div>
