@@ -42,7 +42,8 @@ export default class Portfolio extends Component {
                             </div>
                             <h3>Edutech Web App</h3>
                             <hr />
-                            <p>The most important part is frontend. I can code with beautiful design and animations. I also ensure responsiveness and browser compatibility. User friendly neat and clean design pattern with media queries keyframes and modern css animations.</p>
+                            <p>A digital classroom which connects teacher and students live. Used Javascript, firebase NoSql, Open Vidu for live straming, and also added payment gateways like paypal, ssl commerz.</p>
+                            <a href="https://www.edutechs.org" target="_blank">SEE LIVE</a>
                         </div>
 
                         <div className="card_">
@@ -53,7 +54,8 @@ export default class Portfolio extends Component {
                             </div>
                             <h3>Edutech Mobile App</h3>
                             <hr />
-                            <p>The most important part is frontend. I can code with beautiful design and animations. I also ensure responsiveness and browser compatibility. User friendly neat and clean design pattern with media queries keyframes and modern css animations.</p>
+                            <p>A digital classroom which connects teacher and students live. This is a React Native App. Used firebase NoSql, Open Vidu for live straming, and also added payment gateways like paypal, ssl commerz.</p>
+                            <a href="https://www.edutechs.org" target="_blank">SEE LIVE</a>
                         </div>
 
                        
@@ -65,7 +67,8 @@ export default class Portfolio extends Component {
                         </div>
                         <h3>Portfolio & Blog Site</h3>
                         <hr />
-                        <p>The most important part is frontend. I can code with beautiful design and animations. I also ensure responsiveness and browser compatibility. User friendly neat and clean design pattern with media queries keyframes and modern css animations.</p>
+                            <p>A portfolio and blog site designed with react js. Also used firebase NoSql.</p>
+                            <a href="https://www.edutechs.org" target="_blank">SEE LIVE</a>
                         </div>
                     </div>
 
