@@ -43,7 +43,7 @@ export default class Portfolio extends Component {
                             <h3>Edutech Web App</h3>
                             <hr />
                             <p>A digital classroom which connects teacher and students live. Used Javascript, firebase NoSql, Open Vidu for live straming, and also added payment gateways like paypal, ssl commerz.</p>
-                            <a href="https://www.edutechs.org" target="_blank">SEE LIVE</a>
+                            <a href="https://www.edutechs.org" target="_blank" rel="noopener noreferrer">SEE LIVE</a>
                         </div>
 
                         <div className="card_">
@@ -55,7 +55,7 @@ export default class Portfolio extends Component {
                             <h3>Edutech Mobile App</h3>
                             <hr />
                             <p>A digital classroom which connects teacher and students live. This is a React Native App. Used firebase NoSql, Open Vidu for live straming, and also added payment gateways like paypal, ssl commerz.</p>
-                            <a href="https://www.edutechs.org" target="_blank">SEE LIVE</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.openvidu_react_native&fbclid=IwAR2f6AojMwKzY63f6Sh9q7vvUXPxMAV3YzSz8gf6O-ZaHfshH4L1z7vwZLc" target="_blank" rel="noopener noreferrer">SEE LIVE</a>
                         </div>
 
                        
@@ -68,11 +68,9 @@ export default class Portfolio extends Component {
                         <h3>Portfolio & Blog Site</h3>
                         <hr />
                             <p>A portfolio and blog site designed with react js. Also used firebase NoSql.</p>
-                            <a href="https://www.edutechs.org" target="_blank">SEE LIVE</a>
+                            <a href="https://www.edutechs.org" target="_blank" rel="noopener noreferrer">SEE LIVE</a>
                         </div>
                     </div>
-
-                    
                 </div>
             </>
             )

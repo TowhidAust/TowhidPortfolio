@@ -24,31 +24,7 @@ export default class About extends Component {
       console.log("isdata loaded", this.state.isDataLoaded);
     }
     
-    MyCoolCodeBlock() {
-let code =
-`import React, { Component } from 'react'
-export default class Myself extends Component {
-    render() {
-        return (
-          <div>
-            <p>I am a full stack web & 
-            hybrid mobile app developer.</p>
-          </div>
-        )
-      }
-    }
-        `
-        let language = "jsx"
-        let showLineNumbers = true;
-        return (
-          <CodeBlock
-            text={code}
-            language={language}
-            showLineNumbers={showLineNumbers}
-            theme={dracula}
-          />
-        );
-    }
+
   render() {
     if (!this.state.isDataLoaded) {
       return (

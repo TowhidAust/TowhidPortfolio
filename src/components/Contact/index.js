@@ -2,7 +2,6 @@ import { CircularProgress } from '@material-ui/core';
 import React, { Component } from 'react';
 import CircleAnimation from '../CircleAnimation';
 import './contact.css';
-import {BsCodeSlash} from 'react-icons/bs';
 
 
 export default class Contact extends Component {
