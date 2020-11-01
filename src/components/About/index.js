@@ -4,7 +4,6 @@ import {BsCodeSlash} from 'react-icons/bs';
 
 import React, { Component } from 'react'
 import { Button } from 'react-bootstrap';
-import { CodeBlock, dracula } from "react-code-blocks";
 import "./about.css";
 import towhidCoat from "../../towhid_coat.png";
 import CircularProgress from '@material-ui/core/CircularProgress';
