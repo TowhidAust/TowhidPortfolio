@@ -68,7 +68,7 @@ export default class Portfolio extends Component {
                         <h3>Portfolio & Blog Site</h3>
                         <hr />
                             <p>A portfolio and blog site designed with react js. Also used firebase NoSql.</p>
-                            <a href="https://www.edutechs.org" target="_blank" rel="noopener noreferrer">SEE LIVE</a>
+                            <a href="https://towhidulislam.netlify.app/" target="_blank" rel="noopener noreferrer">SEE LIVE</a>
                         </div>
                     </div>
                 </div>
