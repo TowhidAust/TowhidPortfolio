@@ -65,7 +65,7 @@ export default class Home extends Component {
                 isDataLoaded: true,
                 isUserLoggedIn: isUserLoggedIn
             })
-        })
+        }).catch(err => console.log(err));
     }
 
 
